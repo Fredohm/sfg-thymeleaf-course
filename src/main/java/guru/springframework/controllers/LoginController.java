@@ -21,6 +21,12 @@ public class LoginController {
         return "loginform";
     }
 
+    @RequestMapping("/logout-success")
+    public String doLogout() {
+
+        return "logout-success";
+    }
+
     @RequestMapping(value = "/doLogin", method = RequestMethod.POST)
     public String doLogin(@Valid @ModelAttribute("loginCommand") LoginCommand loginCommand, BindingResult bindingResult) {
 
